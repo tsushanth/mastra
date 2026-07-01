@@ -486,6 +486,7 @@ export class Agent<
   #pubsub?: PubSub;
   #inheritedPubSub?: PubSub;
   #memory?: DynamicArgument<MastraMemory, TRequestContext>;
+  #isInheritedMemory = false;
   #skills?: AgentSkillsInput;
   #skillsFormat?: SkillFormat;
   #workflows?: DynamicArgument<Record<string, AnyWorkflow>, TRequestContext>;
@@ -3389,6 +3390,7 @@ export class Agent<
 
   public __setMemory(memory: DynamicArgument<MastraMemory, TRequestContext>) {
     this.#memory = memory;
+    this.#isInheritedMemory = true;
   }
 
   public __setPubSub(pubsub: PubSub) {
@@ -6941,7 +6943,7 @@ export class Agent<
         const messages = messageList.get.all.core();
         const requiredMessages = minMessages ?? 1;
 
-        if (shouldGenerate && !thread.title && messages.length >= requiredMessages) {
+        if (shouldGenerate && !this.#isInheritedMemory && !thread.title && messages.length >= requiredMessages) {
           const userMessage = this.getMostRecentUserMessage(uiMessages);
 
           if (userMessage) {
