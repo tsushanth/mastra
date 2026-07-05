@@ -172,6 +172,7 @@
         "deepseek-v4-pro",
         "glm-5",
         "glm-5.1",
+        "glm-5.2",
         "kimi-k2-thinking",
         "kimi-k2.5",
         "kimi-k2.6",
@@ -1441,6 +1442,8 @@
         "fal-ai/stable-audio-25/text-to-audio",
         "gemma-4-31B-it",
         "glm-5",
+        "glm-5.1",
+        "glm-5.2",
         "gte-large-en-v1.5",
         "kimi-k2.5",
         "kimi-k2.6",
@@ -1642,6 +1645,39 @@
       "docUrl": "https://docs.zenmux.ai",
       "gateway": "models.dev"
     },
+    "kenari": {
+      "url": "https://kenari.id/v1",
+      "apiKeyEnvVar": "KENARI_API_KEY",
+      "apiKeyHeader": "Authorization",
+      "name": "Kenari",
+      "models": [
+        "claude-opus-4-7",
+        "claude-opus-4-8",
+        "claude-sonnet-4-6",
+        "deepseek-v4-flash",
+        "deepseek-v4-flash:free",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro:free",
+        "gemma-4-31b-it",
+        "glm-5-1",
+        "glm-5-2",
+        "gpt-5-4-mini",
+        "gpt-5-5",
+        "gpt-image-2",
+        "gpt-oss-120b",
+        "gpt-oss-20b",
+        "grok-4-3",
+        "grok-build-0-1",
+        "kimi-k2-6",
+        "kimi-k2-7-code",
+        "mimo-v2-5",
+        "mimo-v2-5-pro",
+        "minimax-m3",
+        "qwen3-7-plus"
+      ],
+      "docUrl": "https://kenari.id/docs",
+      "gateway": "models.dev"
+    },
     "openai": {
       "apiKeyEnvVar": "OPENAI_API_KEY",
       "name": "OpenAI",
@@ -1746,6 +1782,15 @@
         "snowflake-llama3.3-70b"
       ],
       "docUrl": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api",
+      "gateway": "models.dev"
+    },
+    "tencent-token-plan": {
+      "url": "https://api.lkeap.cloud.tencent.com/plan/v3",
+      "apiKeyEnvVar": "TENCENT_TOKEN_PLAN_API_KEY",
+      "apiKeyHeader": "Authorization",
+      "name": "Tencent Token Plan",
+      "models": ["hy3"],
+      "docUrl": "https://cloud.tencent.com/document/product/1823/130060",
       "gateway": "models.dev"
     },
     "github-models": {
@@ -2642,10 +2687,20 @@
       "name": "Deep Infra",
       "models": [
         "MiniMaxAI/MiniMax-M2.5",
+        "MiniMaxAI/MiniMax-M2.7",
+        "MiniMaxAI/MiniMax-M3",
+        "Qwen/Qwen3-32B",
         "Qwen/Qwen3-Coder-480B-A35B-Instruct-Turbo",
+        "Qwen/Qwen3-Max",
+        "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "Qwen/Qwen3.5-122B-A10B",
+        "Qwen/Qwen3.5-27B",
         "Qwen/Qwen3.5-35B-A3B",
         "Qwen/Qwen3.5-397B-A17B",
+        "Qwen/Qwen3.5-9B",
+        "Qwen/Qwen3.6-27B",
         "Qwen/Qwen3.6-35B-A3B",
+        "Qwen/Qwen3.7-Max",
         "XiaomiMiMo/MiMo-V2.5",
         "XiaomiMiMo/MiMo-V2.5-Pro",
         "deepseek-ai/DeepSeek-R1-0528",
@@ -2660,6 +2715,9 @@
         "moonshotai/Kimi-K2.5",
         "moonshotai/Kimi-K2.6",
         "moonshotai/Kimi-K2.7-Code",
+        "nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
+        "nvidia/Nemotron-3-Nano-30B-A3B",
+        "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
         "openai/gpt-oss-120b",
         "openai/gpt-oss-20b",
         "zai-org/GLM-4.6",
@@ -2779,7 +2837,7 @@
         "stepfun-ai/step-3.5-flash",
         "stepfun-ai/step-3.7-flash",
         "upstage/solar-10_7b-instruct",
-        "z-ai/glm-5.1"
+        "z-ai/glm-5.2"
       ],
       "docUrl": "https://docs.api.nvidia.com/nim/",
       "gateway": "models.dev"
@@ -3088,6 +3146,15 @@
         "qwen3.7-plus"
       ],
       "docUrl": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "gateway": "models.dev"
+    },
+    "longcat": {
+      "url": "https://api.longcat.chat/openai",
+      "apiKeyEnvVar": "LONGCAT_API_KEY",
+      "apiKeyHeader": "Authorization",
+      "name": "LongCat",
+      "models": ["LongCat-2.0"],
+      "docUrl": "https://longcat.chat/platform/docs/",
       "gateway": "models.dev"
     },
     "poe": {
@@ -3484,7 +3551,6 @@
         "Qwen/Qwen3-235B-A22B-Instruct-2507",
         "deepseek-ai/DeepSeek-V3.2",
         "google/gemma-4-31B-it",
-        "zai-org/GLM-5",
         "zai-org/GLM-5.1",
         "zai-org/GLM-5.2"
       ],
@@ -3496,7 +3562,7 @@
       "apiKeyEnvVar": "TENCENT_TOKENHUB_API_KEY",
       "apiKeyHeader": "Authorization",
       "name": "Tencent TokenHub",
-      "models": ["hy3-preview"],
+      "models": ["hy3", "hy3-preview"],
       "docUrl": "https://cloud.tencent.com/document/product/1823/130050",
       "gateway": "models.dev"
     },
@@ -5883,6 +5949,7 @@
       "deepseek-v4-pro",
       "glm-5",
       "glm-5.1",
+      "glm-5.2",
       "kimi-k2-thinking",
       "kimi-k2.5",
       "kimi-k2.6",
@@ -6913,6 +6980,8 @@
       "fal-ai/stable-audio-25/text-to-audio",
       "gemma-4-31B-it",
       "glm-5",
+      "glm-5.1",
+      "glm-5.2",
       "gte-large-en-v1.5",
       "kimi-k2.5",
       "kimi-k2.6",
@@ -7079,6 +7148,31 @@
       "z-ai/glm-5.2-free",
       "z-ai/glm-5v-turbo"
     ],
+    "kenari": [
+      "claude-opus-4-7",
+      "claude-opus-4-8",
+      "claude-sonnet-4-6",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash:free",
+      "deepseek-v4-pro",
+      "deepseek-v4-pro:free",
+      "gemma-4-31b-it",
+      "glm-5-1",
+      "glm-5-2",
+      "gpt-5-4-mini",
+      "gpt-5-5",
+      "gpt-image-2",
+      "gpt-oss-120b",
+      "gpt-oss-20b",
+      "grok-4-3",
+      "grok-build-0-1",
+      "kimi-k2-6",
+      "kimi-k2-7-code",
+      "mimo-v2-5",
+      "mimo-v2-5-pro",
+      "minimax-m3",
+      "qwen3-7-plus"
+    ],
     "openai": [
       "chatgpt-image-latest",
       "gpt-3.5-turbo",
@@ -7162,6 +7256,7 @@
       "openai-gpt-5.5",
       "snowflake-llama3.3-70b"
     ],
+    "tencent-token-plan": ["hy3"],
     "github-models": [
       "ai21-labs/ai21-jamba-1.5-large",
       "ai21-labs/ai21-jamba-1.5-mini",
@@ -7892,10 +7987,20 @@
     "sakana": ["fugu", "fugu-ultra", "fugu-ultra-20260615"],
     "deepinfra": [
       "MiniMaxAI/MiniMax-M2.5",
+      "MiniMaxAI/MiniMax-M2.7",
+      "MiniMaxAI/MiniMax-M3",
+      "Qwen/Qwen3-32B",
       "Qwen/Qwen3-Coder-480B-A35B-Instruct-Turbo",
+      "Qwen/Qwen3-Max",
+      "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "Qwen/Qwen3.5-122B-A10B",
+      "Qwen/Qwen3.5-27B",
       "Qwen/Qwen3.5-35B-A3B",
       "Qwen/Qwen3.5-397B-A17B",
+      "Qwen/Qwen3.5-9B",
+      "Qwen/Qwen3.6-27B",
       "Qwen/Qwen3.6-35B-A3B",
+      "Qwen/Qwen3.7-Max",
       "XiaomiMiMo/MiMo-V2.5",
       "XiaomiMiMo/MiMo-V2.5-Pro",
       "deepseek-ai/DeepSeek-R1-0528",
@@ -7910,6 +8015,9 @@
       "moonshotai/Kimi-K2.5",
       "moonshotai/Kimi-K2.6",
       "moonshotai/Kimi-K2.7-Code",
+      "nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
+      "nvidia/Nemotron-3-Nano-30B-A3B",
+      "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning",
       "openai/gpt-oss-120b",
       "openai/gpt-oss-20b",
       "zai-org/GLM-4.6",
@@ -8005,7 +8113,7 @@
       "stepfun-ai/step-3.5-flash",
       "stepfun-ai/step-3.7-flash",
       "upstage/solar-10_7b-instruct",
-      "z-ai/glm-5.1"
+      "z-ai/glm-5.2"
     ],
     "evroc": [
       "KBLab/kb-whisper-large",
@@ -8184,6 +8292,7 @@
       "qwen3.7-max",
       "qwen3.7-plus"
     ],
+    "longcat": ["LongCat-2.0"],
     "poe": [
       "anthropic/claude-haiku-3",
       "anthropic/claude-haiku-3.5",
@@ -8475,11 +8584,10 @@
       "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "deepseek-ai/DeepSeek-V3.2",
       "google/gemma-4-31B-it",
-      "zai-org/GLM-5",
       "zai-org/GLM-5.1",
       "zai-org/GLM-5.2"
     ],
-    "tencent-tokenhub": ["hy3-preview"],
+    "tencent-tokenhub": ["hy3", "hy3-preview"],
     "wandb": [
       "MiniMaxAI/MiniMax-M2.5",
       "OpenPipe/Qwen3-14B-Instruct",
